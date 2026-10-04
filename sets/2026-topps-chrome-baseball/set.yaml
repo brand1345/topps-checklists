@@ -1,0 +1,22 @@
+# Per-set configuration for the pipeline. How to edit this file: docs/ADDING_A_SET.md
+# (every option: docs/SPEC.md). Rebuild with:  make build SLUG=2026-topps-chrome-baseball
+name: 2026 Topps Chrome Baseball
+year: 2026
+sport: Baseball
+primaryFormat: hobby
+
+# Box configuration per odds column. Used to turn pack odds into "per box / per case"
+# and to decide rarity tiers. Values come from the sources named on each line; every one is
+# consistent with the odds sheet (each format's rarest odds divide into whole boxes and cases).
+formats:
+  hobby: { label: Hobby, packsPerBox: 20, boxesPerCase: 12 }   # https://www.checklistinsider.com/2026-topps-chrome-baseball https://www.baseballcardpedia.com/index.php/2026_Topps_Chrome https://www.midwestcards.com/baseball-cards/2026-topps-chrome-baseball-hobby-box/
+  jumbo: { label: Jumbo, packsPerBox: 12, boxesPerCase: 8 }   # https://www.checklistinsider.com/2026-topps-chrome-baseball https://www.baseballcardpedia.com/index.php/2026_Topps_Chrome https://cardsmithsbreaks.com/full-checklist/2026-topps-chrome-baseball/
+  value-box: { label: Value Box, packsPerBox: 7, boxesPerCase: 40 }   # https://www.blowoutcards.com/2026-topps-chrome-baseball-blaster-40-box-case.html https://cardsmithsbreaks.com/full-checklist/2026-topps-chrome-baseball-value-box/
+  mega: { label: Mega, packsPerBox: 6, boxesPerCase: 20 }   # https://www.checklistinsider.com/2026-topps-chrome-baseball https://www.midwestcards.com/baseball-cards/2026-topps-chrome-baseball-mega-box/ https://cardsmithsbreaks.com/full-checklist/2026-topps-chrome-baseball/
+  breaker-delight: { label: "Breaker's Delight", packsPerBox: 1, boxesPerCase: 6 }   # https://www.checklistinsider.com/2026-topps-chrome-baseball https://www.blowoutcards.com/2026-topps-chrome-baseball-delight-box.html https://cardsmithsbreaks.com/full-checklist/2026-topps-chrome-baseball-delight-box/team/ https://theawesomecardshop.com/products/2026-topps-chrome-baseball-breakers-delight-6-box-case
+  fanatics: { label: Fanatics, packsPerBox: 6, boxesPerCase: 20 }   # Fanatics-exclusive Mega box: https://cardsmithsbreaks.com/full-checklist/2026-topps-chrome-baseball-fanatics-mega-box/team/ https://cardsmithsbreaks.com/full-checklist/2026-topps-chrome-baseball/
+
+overrides:
+  sections:
+    # The checklist prints "COMMISSIONERS"; the odds sheet and the trophy's official name have the apostrophe.
+    2025-mlb-commissioners-trophy: { name: "2025 MLB Commissioner's Trophy" }

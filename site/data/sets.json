@@ -1,0 +1,14 @@
+{
+ "schemaVersion": 1,
+ "sets": [
+  {
+   "slug": "2026-topps-chrome-baseball",
+   "name": "2026 Topps Chrome Baseball",
+   "year": 2026,
+   "sport": "Baseball",
+   "cards": 1604,
+   "sections": 55,
+   "generatedAt": "2026-10-04T05:57:40Z"
+  }
+ ]
+}

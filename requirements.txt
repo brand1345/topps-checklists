@@ -1,0 +1,5 @@
+# Pinned so local and CI builds parse PDFs identically (text extraction can shift between versions).
+pdfplumber==0.11.8
+pdfminer.six==20251107
+pypdfium2==5.13.0
+PyYAML==6.0.3

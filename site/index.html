@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Topps Checklists</title>
+  <meta name="description" content="Topps card checklists split into base &amp; parallels, inserts, case hits, autographs and relics — with pack odds for every box format.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+    // Apply the saved theme before first paint (no flash). Storage can throw in private modes.
+    try {
+      var t = localStorage.getItem("tc.theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="module" src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="top-inner wrap">
+      <a class="brand" href="#/" aria-label="Topps Checklists home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Checklists</span>
+      </a>
+      <label class="set-pick">
+        <span class="sr-only">Set</span>
+        <select id="set-select" aria-label="Choose a set"></select>
+      </label>
+      <form class="search" id="search-form" role="search">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 0 1 5.96 12.06l4.24 4.24-1.4 1.4-4.24-4.24A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
+        <label class="sr-only" for="search">Search players, teams, card numbers or sections</label>
+        <input id="search" type="search" placeholder="Player, team or card #" autocomplete="off" spellcheck="false" enterkeyhint="search" disabled>
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      </form>
+      <label class="fmt-pick">
+        <span class="fmt-label">Odds</span>
+        <select id="format-select" aria-label="Box format used for odds" disabled></select>
+      </label>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Dark theme" aria-pressed="false">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 14.6A8.5 8.5 0 0 1 9.4 3.7a8.5 8.5 0 1 0 10.9 10.9Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.6M12 19.6v2.6M4.8 4.8l1.8 1.8M17.4 17.4l1.8 1.8M1.8 12h2.6M19.6 12h2.6M4.8 19.2l1.8-1.8M17.4 6.6l1.8-1.8"/></svg>
+      </button>
+    </div>
+    <nav class="tabs wrap" id="tabs" aria-label="Checklist categories"></nav>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <div class="loading" role="status"><span class="spinner" aria-hidden="true"></span>Loading checklist…</div>
+  </main>
+  <div id="route-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="wrap">This checklist needs JavaScript enabled.</p></noscript>
+</body>
+</html>
